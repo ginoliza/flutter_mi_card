@@ -12,11 +12,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Container(),
+        body: SafeArea(
+          child: Container(
+            color: Colors.black,
+            child: Text(
+              "hola",
+              style: TextStyle(color: Colors.red),
+            ),
+            width: 100.0,
+            height: 100.0,
+            // EdgeInsets.<all, symmetric, fromLTRB, only>
+            margin: EdgeInsets.only(left: 200.0),
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
-
