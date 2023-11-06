@@ -9,30 +9,72 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xfff47c7fc),
         body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                color: Colors.red,
-                child: Text("c1"),
-                width: 100.0,
-                height: 100.0,
+              CircleAvatar(
+                backgroundColor: Colors.black,
+                radius: 60.0,
+                backgroundImage: AssetImage("images/foto.jpg"),
               ),
-              Container(
-                color: Colors.blue,
-                child: Text("c2"),
-                width: 100.0,
-                height: 100.0,
+              Text(
+                "Gino Liza",
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Color(0xfff022539),
+                  fontFamily: 'PressStart2P',
+                ),
               ),
-              Container(
-                color: Colors.green,
-                child: Text("c3"),
-                width: 100.0,
-                height: 100.0,
+              Text(
+                "Computer Scientist",
+                style: TextStyle(
+                  fontSize: 30.0,
+                  color: Color(0xFFFFBF3F1),
+                  fontFamily: 'Oswald',
+                ),
+              ),
+              SizedBox(height: 20.0),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 30.0),
+                color: Color(0xfffFB991C),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.call,
+                    color: Color(0xfff1C7690),
+                  ),
+                  title: Text(
+                    "+51 949 747 086",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontFamily: 'Oswald',
+                        color: Color(0xfff1C7690)),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 30.0),
+                color: Color(0xfffFB991C),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Color(0xfff1C7690),
+                  ),
+                  title: Text(
+                    "ginoangelolr@gmail.com",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontFamily: 'Oswald',
+                      color: Color(0xfff1C7690),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
